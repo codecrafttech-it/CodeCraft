@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- ✅ Favicon -->
+  <!-- Favicon for standard browsers -->
+<link rel="icon" type="image/png" sizes="192x192" href="./favicon-192x192.png" media="(max-width: 600px)">
+<link rel="icon" type="image/png" sizes="512x512" href="./favicon-512x512.png" media="(min-width: 601px)">
+   
+
+<!-- Apple Touch icon for iOS devices -->
+<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+
+<!-- Shortcut icon fallback -->
+<link rel="shortcut icon" href="./favicon-192x192.png" type="image/png">
+ <meta name="theme-color" content="#0d3b66">
+  <meta name="author" content="CodeCraft Team">
+<meta name="robots" content="index, follow">
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CodeCraft — Professional IT Solutions, Web Development, Mobile Apps, and UI/UX Design.">
+<link rel="stylesheet" href="aboutstyle.css">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta name="keywords" content="CodeCraft, IT solutions, web development, mobile apps, UI/UX design, software development">
+  <meta property="og:title" content="CodeCraft — Professional IT Solutions">
+  <meta property="og:description" content="Innovative web, mobile, and software solutions that drive your business forward.">
+  <meta property="og:image" content="logo.jpg">
+  <meta property="og:type" content="website">
+  <title>About Us | CodeCraft — Your Trusted IT Solutions Partner
+</title>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header>
+  <nav>
+    <div class="logo">
+      <img src="Logo53.png" alt="CodeCraft Logo">
+      <span>CodeCraft.</span>
+    </div>
+   <div class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ===== ABOUT HEADING ===== -->
+ <section class="about" id="about">
+
+  <!-- About Heading -->
+  <h1 class="about-heading">About CodeCraft</h1>
+
+  <!-- About Intro: Left Column (h2 + quote) | Right Column (paragraphs) | Bottom Image -->
+  <div class="about-intro">
+    <div class="intro-left">
+      <h2>Discover the Story Behind <span>CodeCraft</span></h2>
+      <p class="about-quote">With CodeCraft, your business doesn’t just adapt — it grows, evolves, and leads.</p>
+    </div>
+    <div class="intro-right">
+      <p> 
+       At CodeCraft, we transform bold ideas into meaningful digital experiences. With a focus on innovation, precision, and performance, we deliver end-to-end solutions that help businesses thrive in the digital age. From startups aiming to make their mark to enterprises ready to scale, we build technology that adapts, grows, and succeeds alongside you.
+       </p>
+        <br>
+      <p>
+       We value partnerships built on trust, clarity, and collaboration. Our goal is to empower your business with future-ready digital solutions that simplify challenges and spark growth — so you can focus on what truly matters while we bring your vision to life.
+         </p>
+      </div>
+    <div class="intro-bottom">
+      <img src="about2.png" alt="About CodeCraft">
+    </div>
+  </div>
+
+  <!-- About Split Cards -->
+  <div class="custom-split">
+  <div class="custom-card">
+    <div class="custom-title">Why We Are</div>
+    <div class="custom-text"><p>
+     We are a team of dedicated professionals committed to delivering excellence in everything we do. Our focus is on creating meaningful experiences, building trust, and ensuring lasting value for our clients. With attention to detail and a passion for quality, we bring ideas to life in the most professional and impactful way.
+    </p>
+      </div>
+    </div>
+
+  <div class="custom-card1">
+    <div class="custom-title">Our Mission</div>
+    <div class="custom-text"><p>Our mission is to deliver excellence through dedication, integrity, and teamwork. We provide quality services that create real value, build trust, and contribute to the growth and success of our clients and partners.</p></div>
+    </div>
+
+  <div class="custom-card2">
+    <div class="custom-title">Our Vision</div>
+    <div class="custom-text"><p>Our vision is to build lasting relationships through trust, quality, and commitment. We aim to grow with integrity, create meaningful value, and make a positive impact on everyone we work with.</p></div>
+  </div>
+</div>
+  <!-- Highlight Section (CTA) -->
+  <div class="about-highlight">
+    <div class="highlight-content">
+      <h3>Partner With CodeCraft Today</h3>
+      <p>Join hands with CodeCraft to turn your ideas into impactful digital solutions. Together, we craft experiences that delight your users and drive measurable business growth.</p>
+      <a href="contact.html" class="btn-primary">Start a Project</a>
+    </div>
+  </div>
+
+</section>
+<!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="custom-footer-container">
+     
+     <div class="footer-bottom">
+  <p>&copy; 2025 <strong>CodeCraft</strong>. All Rights Reserved.</p>
+</div>
+    </div>
+  </footer>
+<!-- ===== NAVBAR TOGGLE SCRIPT ===== -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('nav ul');
+  toggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('active');
+    toggle.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+});
+</script>
+
+</body>
+</html>

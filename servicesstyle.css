@@ -1,0 +1,599 @@
+/* =========================
+   Reset & Body
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+html { scroll-behavior: smooth; }
+
+body {
+  background: #f5f5f5;
+/*  background: #f4f8fb;*/
+  color: #111;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* =========================
+   Navbar (UNCHANGED)
+========================= */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #0d3b66;
+}
+
+.logo img {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #d62828;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: #0d3b66;
+}
+
+/* =========================
+   Services Header / Overview
+========================= */
+.services-overview {
+  padding: 7rem 2rem 3rem;
+  background: #0d3b66;
+  color: #fff;
+  text-align: center;
+  
+}
+
+.services-overview h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-bottom: 0.8rem;
+ /* color: #ffd700;*/
+  color:#ffcc00;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.services-overview p {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-weight: 500;
+ /* color: #e0e0e0;*/
+  color:#f0f0f0;
+   opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+/* =========================
+   Service Cards Container
+========================= */
+.service-details {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   Individual Service Cards - Futuristic Odd/Even
+========================= */
+.service-card {
+  position: relative;
+  background: linear-gradient(145deg, #fff, #f0f0f0);
+  padding: 2.5rem 1.5rem 2.5rem;
+  flex: 1 1 320px;
+  max-width: 380px;
+  border-radius: 25px;
+  opacity: 0;
+  animation: fadeInScale 0.8s ease forwards;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  overflow: visible;
+  transition: 0.4s ease;
+  text-align: left;
+}
+
+.service-card:nth-child(1) { animation-delay: 0.2s; }
+.service-card:nth-child(2) { animation-delay: 0.4s; }
+.service-card:nth-child(3) { animation-delay: 0.6s; }
+.service-card:nth-child(4) { animation-delay: 0.8s; }
+.service-card:nth-child(5) { animation-delay: 1s; }
+.service-card:nth-child(6) { animation-delay: 1.2s; }
+
+/* Odd cards - top-right & bottom-left */
+.service-card:nth-child(odd)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  /*background: #f94144;*/
+  background:#e63946;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  border-top-right-radius: 25px;
+  transition: 0.4s ease;
+}
+.service-card:nth-child(odd)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  /*background: #f94144;*/
+  background:#e63946;
+  clip-path: polygon(0 100%, 0 0, 100% 100%);
+  border-bottom-left-radius: 25px;
+  transition: 0.4s ease;
+}
+
+/* Even cards - top-left & bottom-right */
+.service-card:nth-child(even)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  /*background: #f94144;*/
+  background: #e63946;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  border-top-left-radius: 25px;
+  transition: 0.4s ease;
+}
+.service-card:nth-child(even)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+ /* background: #f94144;*/
+  background:#e63946;
+  clip-path: polygon(100% 100%, 0 100%, 100% 0);
+  border-bottom-right-radius: 25px;
+  transition: 0.4s ease;
+}
+
+/* Hover effects - simple & professional */
+.service-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(217,38,40,0.25);
+  background: linear-gradient(145deg, #fff, #f8f0f0);
+}
+
+.service-card:hover::before,
+.service-card:hover::after {
+  width: 70px;
+  height: 70px;
+  filter: drop-shadow(0 0 8px #e63946); /* replace */
+}
+
+.service-card:hover img {
+  transform: scale(1.03);
+}
+
+.service-card:hover h2 {
+  color: #d62828;
+}
+
+/* Card Image - Larger & fully visible */
+.service-card img {
+  width: 100%;
+  height: auto;
+  max-height: 320px;        /* ensures full image visible */
+  object-fit: contain;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease;
+}
+
+/* Card Text */
+.service-card h2 {
+ /* color: #f94144;*/
+  color:#e63946;
+  margin-bottom: 0.6rem;
+  font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+  transition: color 0.4s ease;
+}
+
+.service-card p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  font-size: clamp(0.95rem, 1.8vw, 1rem);
+}
+
+/* =========================
+   Process Section
+========================= */
+.process {
+  /*background: #e0f7fa;*/
+  background: #e3f2fd; /* lighter modern tech blue */
+  padding: 4rem 2rem;
+  border-radius: 25px;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.process h2 {
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  color: #0d3b66;
+  text-align: center;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeInLeft 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.process-intro {
+  max-width: 700px;
+   opacity: 0;
+  animation: fadeInRight 1s ease forwards;
+  animation-delay: 0.4s;
+  margin: 0 auto 2rem;
+  color: #333;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  line-height: 1.6;
+  text-align:center;
+}
+
+.process-layout {
+  display: block;
+  text-align: center;
+}
+
+.process-image {
+  margin-bottom: 2rem;
+}
+
+.process-image img {
+  max-width: 65%;        /* ↓ decreased from 80% to 65% */
+  height: auto;          /* keeps full height proportionally */
+  object-fit: contain;   /* ensures full image visible without cutting */
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  margin: 0 auto;        /* center the smaller image */
+  display: block;
+  opacity: 0;
+  animation: fadeInScale 1s ease forwards;
+  animation-delay: 0.6s;
+}
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+.process-step {
+  background: #fff;
+  opacity: 0;
+  animation: fadeInUp 0.9s ease forwards;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  max-width: 100%;
+  text-align: left;
+}
+
+.process-step:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(217,38,40,0.2);
+}
+
+.step-number {
+  display: inline-block;
+  /*background: #f94144;*/
+  background: #e63946;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  margin-bottom: 0.8rem;
+}
+
+.process-step h3 {
+  color: #0d3b66;
+  margin-bottom: 0.5rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.process-step p {
+  color: #555;
+  line-height: 1.6;
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+}
+
+.process-step:nth-child(1) { animation-delay: 0.2s; }
+.process-step:nth-child(2) { animation-delay: 0.4s; }
+.process-step:nth-child(3) { animation-delay: 0.6s; }
+.process-step:nth-child(4) { animation-delay: 0.8s; }
+/* =========================
+   Footer (UNCHANGED)
+========================= */
+.custom-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  gap: 1rem;
+  /*background: #0d3b66;*/
+   background: linear-gradient(135deg, #0d3b66, #11497f);
+  color: #fff;
+  border-radius: 20px 20px 0 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.custom-footer-container .footer-links ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-footer-container .footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.custom-footer-container .footer-links ul li a:hover {
+  /*color: #f94144;*/
+  color:#e63946;
+}
+
+.custom-footer-container .footer-bottom {
+  font-size: 0.85rem;
+  color: #fff;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .custom-footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .custom-footer-container .footer-links ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .custom-footer-container .footer-bottom {
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media(max-width:1080px) {
+/*  nav { padding: 1rem; }*/
+  .service-details { gap: 1.5rem; }
+}
+
+@media(max-width:992px) {
+  .services-overview { padding-top: 9rem; }
+}
+
+@media(max-width:768px) {
+   nav {
+    justify-content: space-between; /* keep logo on left, toggle on right */
+  }
+  
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #0d3b66;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    align-items: flex-start;
+    padding: 1rem 1.5rem;
+  }
+  
+  .logo {
+    font-size: 1.8rem;          /* slightly smaller but still readable */
+    gap: 0.4rem;                /* tighter spacing */
+    flex: 1;                    /* allow it to take needed space */
+    z-index: 2001;              /* stay above menu background */
+  }
+
+  .logo img {
+    width: 45px;
+    height: 45px;
+  }
+
+  /*nav ul.active {
+    max-height: 400px;
+  }*/
+nav ul.active {
+  max-height: 400px;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+}
+
+  nav ul li {
+    margin: 0.8rem 0;
+    text-align: left;
+    width: 100%;
+  }
+
+  nav ul li a {
+    color: #fff;
+    font-size: 1.2rem;
+    display: block;
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+  .services-overview { padding-top: 8rem; }
+  .services-overview h1 { font-size: 2.2rem; }
+   .services-overview p {
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem); /* smaller than base */
+  }
+
+  .service-card { max-width: 100%; border-radius: 25px; }
+
+  .process-layout { display: flex; flex-direction: column; text-align: center; align-items: center; }
+  .process-steps { display: flex; flex-direction: column; gap: 1.5rem; width: 100%; align-items: center; }
+  .process-step { max-width: 300px; width: 100%; }
+}
+
+@media(max-width:480px) {
+  .services-overview h1 { font-size: 1.8rem; }
+  .services-overview p { font-size: 1.1rem; }
+  .service-card img { width: 100%; height: auto; object-fit: contain; }
+  .process-image img { width: 100%; height: auto; }
+  .process-step { max-width: 100%; }
+}
+
+@media(max-width:320px) {
+  nav ul li a { font-size:1rem; }
+  .service-card { padding:1.2rem; }
+  .service-card h2 { font-size:1.3rem; }
+  .services-overview h1 { font-size:1.5rem; }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  0% { opacity: 0; transform: translateX(-20px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  0% { opacity: 0; transform: translateX(20px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInScale {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* =============================
+   PERFECT FONT & SPACING OPTIMIZATION
+============================= */
+
+/* Small devices (≤767px) */
+@media (max-width: 767px) {
+  .services-overview h1 { font-size: 1.8rem; line-height: 2.2rem; margin-bottom: 0.5rem; }
+  .services-overview p { font-size: 1.1rem; line-height: 1.6rem; margin-bottom: 1.2rem; }
+
+  .service-card h2 { font-size: 1.3rem; line-height: 1.6rem; margin-bottom: 0.5rem; }
+  .service-card p { font-size: 0.9rem; line-height: 1.5rem; margin-bottom: 1rem; }
+
+  .process h2 { font-size: 1.6rem; line-height: 2rem; margin-bottom: 0.8rem; }
+  .process-intro { font-size: 0.95rem; line-height: 1.5rem; margin-bottom: 1.5rem; }
+  .process-step h3 { font-size: 1rem; line-height: 1.4rem; margin-bottom: 0.4rem; }
+  .process-step p { font-size: 0.9rem; line-height: 1.5rem; }
+}
+
+/* Tablets (768px - 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .services-overview h1 { font-size: 2.2rem; line-height: 2.6rem; margin-bottom: 0.6rem; }
+  .services-overview p { font-size: 1.2rem; line-height: 1.8rem; margin-bottom: 1.4rem; }
+
+  .service-card h2 { font-size: 1.5rem; line-height: 2rem; margin-bottom: 0.6rem; }
+  .service-card p { font-size: 1rem; line-height: 1.6rem; margin-bottom: 1.2rem; }
+
+  .process h2 { font-size: 1.8rem; line-height: 2.2rem; margin-bottom: 0.8rem; }
+  .process-intro { font-size: 1rem; line-height: 1.7rem; margin-bottom: 1.6rem; }
+  .process-step h3 { font-size: 1.1rem; line-height: 1.6rem; margin-bottom: 0.5rem; }
+  .process-step p { font-size: 0.95rem; line-height: 1.6rem; }
+}
+
+/* Laptops / Large Screens (1200px - 1599px) */
+@media (min-width: 1200px) and (max-width: 1599px) {
+  .services-overview h1 { font-size: 2.5rem; line-height: 3rem; margin-bottom: 0.8rem; }
+  .services-overview p { font-size: 1.3rem; line-height: 1.9rem; margin-bottom: 1.6rem; }
+
+  .service-card h2 { font-size: 1.7rem; line-height: 2.2rem; margin-bottom: 0.7rem; }
+  .service-card p { font-size: 1.05rem; line-height: 1.7rem; margin-bottom: 1.3rem; }
+
+  .process h2 { font-size: 2rem; line-height: 2.6rem; margin-bottom: 1rem; }
+  .process-intro { font-size: 1.05rem; line-height: 1.8rem; margin-bottom: 1.8rem; }
+  .process-step h3 { font-size: 1.2rem; line-height: 1.7rem; margin-bottom: 0.6rem; }
+  .process-step p { font-size: 1rem; line-height: 1.7rem; }
+}
+
+/* Ultra-Wide Screens (≥1600px) */
+@media (min-width: 1600px) {
+  .services-overview h1 { font-size: 2.8rem; line-height: 3.3rem; margin-bottom: 1rem; }
+  .services-overview p { font-size: 1.4rem; line-height: 2rem; margin-bottom: 1.8rem; }
+
+  .service-card h2 { font-size: 1.8rem; line-height: 2.4rem; margin-bottom: 0.8rem; }
+  .service-card p { font-size: 1.1rem; line-height: 1.8rem; margin-bottom: 1.5rem; }
+
+  .process h2 { font-size: 2.2rem; line-height: 2.8rem; margin-bottom: 1rem; }
+  .process-intro { font-size: 1.1rem; line-height: 1.9rem; margin-bottom: 2rem; }
+  .process-step h3 { font-size: 1.3rem; line-height: 1.9rem; margin-bottom: 0.7rem; }
+  .process-step p { font-size: 1.05rem; line-height: 1.8rem; }
+}
