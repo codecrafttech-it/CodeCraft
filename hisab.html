@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="HisabBook by CodeCraft — a simple, private and offline personal finance application.">
+
+    <meta name="keywords" content="HisabBook, Hisab, personal finance app, expense tracker, income tracker, CodeCraft">
+
+    <meta name="author" content="CodeCraft">
+
+    <meta name="theme-color" content="#0d3b66">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon-512x512.png">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <title>HisabBook | CodeCraft</title>
+
+    <!-- Hisab CSS ONLY -->
+    <link rel="stylesheet" href="hisabstyle.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+       INTRO SCREEN
+  ====================================================== -->
+
+    <div class="intro-screen" id="introScreen">
+
+        <div class="intro-content">
+
+            <div class="intro-logo-wrap">
+                <img src="Logo53.png" alt="CodeCraft Logo" class="intro-logo">
+            </div>
+
+            <div class="intro-brand">
+                CodeCraft<span>.</span>
+            </div>
+
+            <div class="intro-line"></div>
+
+            <div class="intro-tagline">
+                Where Code Meets Creativity.
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+       NAVBAR
+       SAME AS INDEX
+  ====================================================== -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo" aria-label="CodeCraft Home">
+
+                <img src="Logo53.png" alt="CodeCraft Logo">
+
+                <span>
+                    CodeCraft<span class="logo-dot">.</span>
+                </span>
+
+            </a>
+
+
+            <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
+                aria-controls="main-navigation">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+            <ul class="nav-links" id="main-navigation">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="projects.html">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="products.html" class="active">
+                        Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main class="hisab-page">
+
+
+        <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+        <section class="hisab-hero">
+
+            <div class="hisab-hero-container">
+
+                <div class="hisab-hero-content">
+
+                    <span class="hisab-label">
+                        CODECRAFT PRODUCT
+                    </span>
+
+                    <h1>
+                        Meet <span>HisabBook</span>
+                    </h1>
+
+                    <p class="hisab-tagline">
+                        Simple. Private. Offline.
+                    </p>
+
+                    <p class="hisab-description">
+                        HisabBook is a simple personal finance application
+                        designed to help you manage your daily money records
+                        without unnecessary complexity.
+                    </p>
+
+                    <div class="hisab-platform">
+                        Available on Android
+                    </div>
+
+                    <div class="hisab-hero-buttons">
+
+                        <a href="https://drive.google.com/file/d/1e8S-cO8AarpSzG4lIVaVFipLXBWu4zfY/view?usp=drivesdk"
+                            class="hisab-download-btn" target="_blank" rel="noopener noreferrer">
+
+                            Download HisabBook
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hisab-hero-visual">
+
+                    <div class="hisab-phone">
+
+                        <img src="front.jpg" alt="HisabBook application screen">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+        <section class="hisab-section hisab-about">
+
+            <div class="hisab-about-grid">
+
+                <div class="hisab-about-image">
+
+                    <img src="start.jpg" alt="HisabBook start screen">
+
+                </div>
+
+
+                <div class="hisab-about-content">
+
+                    <span class="hisab-section-label">
+                        ABOUT HISABBOOK
+                    </span>
+
+                    <h2>
+                        Your daily <span>Hisab</span>,
+                        made simple.
+                    </h2>
+
+                    <p>
+                        Keeping track of everyday money does not need
+                        to be complicated. HisabBook provides a clean
+                        and practical way to record your financial
+                        transactions.
+                    </p>
+
+                    <p>
+                        Whether money comes in, goes out, is given,
+                        taken, or repaid, you can keep your records
+                        organized in one place.
+                    </p>
+
+                    <p>
+                        HisabBook is designed with simplicity and
+                        privacy in mind, making it useful for everyday
+                        personal finance management.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+         FEATURES
+    ====================================================== -->
+
+        <section class="hisab-section hisab-features">
+
+            <div class="hisab-section-heading">
+
+                <span class="hisab-section-label">
+                    FEATURES
+                </span>
+
+                <h2>
+                    Everything you need for your daily Hisab.
+                </h2>
+
+                <p>
+                    Practical features designed around real-world
+                    personal money management.
+                </p>
+
+            </div>
+
+
+            <div class="hisab-feature-grid">
+
+
+                <article class="hisab-feature-card">
+
+                    <div class="hisab-feature-icon">
+                        ₹
+                    </div>
+
+                    <h3>
+                        Income & Expenses
+                    </h3>
+
+                    <p>
+                        Record your income and expenses quickly
+                        and keep track of your daily transactions.
+                    </p>
+
+                </article>
+
+
+                <article class="hisab-feature-card">
+
+                    <div class="hisab-feature-icon">
+                        ↔
+                    </div>
+
+                    <h3>
+                        Give & Take
+                    </h3>
+
+                    <p>
+                        Keep separate records for money you give
+                        and money you take from others.
+                    </p>
+
+                </article>
+
+
+                <article class="hisab-feature-card">
+
+                    <div class="hisab-feature-icon">
+                        ↻
+                    </div>
+
+                    <h3>
+                        Repayments
+                    </h3>
+
+                    <p>
+                        Track repayments clearly with separate
+                        records for given and taken amounts.
+                    </p>
+
+                </article>
+
+
+                <article class="hisab-feature-card">
+
+                    <div class="hisab-feature-icon">
+                        ⬇
+                    </div>
+
+                    <h3>
+                        Backup & Restore
+                    </h3>
+
+                    <p>
+                        Backup your records and restore them when
+                        you need them.
+                    </p>
+
+                </article>
+
+
+                <article class="hisab-feature-card">
+
+                    <div class="hisab-feature-icon">
+                        PDF
+                    </div>
+
+                    <h3>
+                        PDF Reports
+                    </h3>
+
+                    <p>
+                        Generate a PDF report of your financial
+                        records whenever you need a summary.
+                    </p>
+
+                </article>
+
+
+                <article class="hisab-feature-card">
+
+                    <div class="hisab-feature-icon">
+                        🔒
+                    </div>
+
+                    <h3>
+                        App Security
+                    </h3>
+
+                    <p>
+                        Protect your financial records with
+                        application lock and supported device
+                        authentication.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+         SCREENSHOTS
+    ====================================================== -->
+
+        <section class="hisab-section hisab-screenshots">
+
+            <div class="hisab-section-heading">
+
+                <span class="hisab-section-label">
+                    APP PREVIEW
+                </span>
+
+                <h2>
+                    See HisabBook in action.
+                </h2>
+
+                <p>
+                    A clean interface built to keep everyday
+                    money management straightforward.
+                </p>
+
+            </div>
+
+
+            <div class="hisab-screenshot-grid">
+
+
+                <article class="hisab-screen-card">
+
+                    <img src="front.jpg" alt="HisabBook home screen">
+
+                    <h3>
+                        Simple Dashboard
+                    </h3>
+
+                </article>
+
+
+                <article class="hisab-screen-card">
+
+                    <img src="start.jpg" alt="HisabBook start screen">
+
+                    <h3>
+                        Quick Start
+                    </h3>
+
+                </article>
+
+
+                <article class="hisab-screen-card">
+
+                    <img src="tran.jpg" alt="HisabBook transactions">
+
+                    <h3>
+                        Transactions
+                    </h3>
+
+                </article>
+
+
+                <article class="hisab-screen-card">
+
+                    <img src="report.jpg" alt="HisabBook report">
+
+                    <h3>
+                        Reports
+                    </h3>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+         PRIVACY
+    ====================================================== -->
+
+        <section class="hisab-section hisab-privacy">
+
+            <div class="hisab-privacy-box">
+
+                <span class="hisab-section-label">
+                    PRIVACY
+                </span>
+
+                <h2>
+                    Your money records,
+                    <span>your control.</span>
+                </h2>
+
+                <p>
+                    HisabBook is designed for personal financial
+                    record keeping. The application focuses on
+                    keeping the experience simple and private,
+                    without making everyday money management
+                    unnecessarily complicated.
+                </p>
+
+
+                <div class="hisab-privacy-points">
+
+                    <div class="hisab-privacy-point">
+                        <strong>01</strong>
+                        Private records
+                    </div>
+
+                    <div class="hisab-privacy-point">
+                        <strong>02</strong>
+                        Offline-friendly
+                    </div>
+
+                    <div class="hisab-privacy-point">
+                        <strong>03</strong>
+                        App protection
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+         DOWNLOAD
+    ====================================================== -->
+
+        <section class="hisab-section hisab-download">
+
+            <div class="hisab-download-box">
+
+                <span class="hisab-section-label">
+                    GET HISABBOOK
+                </span>
+
+                <h2>
+                    Start managing your Hisab today.
+                </h2>
+
+                <p>
+                    Keep your daily financial records organized
+                    with a simple application built for everyday use.
+                </p>
+
+                <a href="https://drive.google.com/file/d/1e8S-cO8AarpSzG4lIVaVFipLXBWu4zfY/view?usp=drivesdk"
+                    class="hisab-download-btn" target="_blank" rel="noopener noreferrer">
+
+                    Download for Android
+
+                </a>
+
+                <p class="hisab-download-note">
+                    Android version currently available.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+         FINAL CTA
+    ====================================================== -->
+
+        <section class="hisab-cta">
+
+            <div class="hisab-cta-content">
+
+                <h2>
+                    Simple money management
+                    with <span>HisabBook.</span>
+                </h2>
+
+                <p>
+                    Built by CodeCraft to make everyday financial
+                    record keeping easier, clearer and more practical.
+                </p>
+
+                <a href="products.html" class="hisab-outline-btn">
+
+                    View More Products
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+       FOOTER
+       SAME AS INDEX
+  ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+
+            <!-- Brand -->
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+
+                    <img src="Logo53.png" alt="CodeCraft Logo">
+
+                    <span>
+                        CodeCraft<span class="logo-dot">.</span>
+                    </span>
+
+                </a>
+
+                <p class="footer-tagline">
+                    Where Code Meets Creativity.
+                </p>
+
+                <p>
+                    Building practical digital solutions through
+                    creativity, technology, and purposeful development.
+                </p>
+
+            </div>
+
+
+
+            <!-- Quick Links -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="services.html">
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="projects.html">
+                            Projects
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="products.html">
+                            Products
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- What We Build -->
+
+            <div class="footer-column">
+
+                <h3>
+                    What We Build
+                </h3>
+
+                <ul>
+                    <li><a href="services.html">Web Applications</a></li>
+                    <li><a href="services.html">Custom Software</a></li>
+                    <li><a href="services.html">Mobile Apps</a></li>
+                    <li><a href="services.html">E-Commerce</a></li>
+                    <li><a href="services.html">AI & Automation</a></li>
+                    <li><a href="services.html">UI/UX Design</a></li>
+                    <li><a href="services.html">ERP System</a></li>
+                    <li><a href="services.html">Digital Marketing</a></li>
+                    <li><a href="services.html">Technical Support</a></li>
+                </ul>
+
+            </div>
+
+
+
+            <!-- Contact -->
+
+            <div class="footer-column footer-contact">
+
+                <h3>
+                    Let's Connect
+                </h3>
+
+                <p>
+                    Have a project or idea?
+                    Let's discuss how technology can help.
+                </p>
+
+                <a href="contact.html" class="footer-contact-btn">
+
+                    Contact CodeCraft →
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 <strong>CodeCraft</strong>.
+                All Rights Reserved.
+            </p>
+
+            <p>
+                Where Code Meets Creativity.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+       NAVBAR JS
+  ====================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const menuToggle =
+                    document.querySelector(".menu-toggle");
+
+                const navLinks =
+                    document.querySelector(".nav-links");
+
+
+                if (!menuToggle || !navLinks) return;
+
+
+                menuToggle.addEventListener(
+                    "click",
+                    function () {
+
+                        const isOpen =
+                            navLinks.classList.toggle("active");
+
+                        menuToggle.classList.toggle(
+                            "open",
+                            isOpen
+                        );
+
+                        menuToggle.setAttribute(
+                            "aria-expanded",
+                            isOpen ? "true" : "false"
+                        );
+
+                    }
+                );
+
+
+                document
+                    .querySelectorAll(".nav-links a")
+                    .forEach(function (link) {
+
+                        link.addEventListener(
+                            "click",
+                            function () {
+
+                                navLinks.classList.remove(
+                                    "active"
+                                );
+
+                                menuToggle.classList.remove(
+                                    "open"
+                                );
+
+                                menuToggle.setAttribute(
+                                    "aria-expanded",
+                                    "false"
+                                );
+
+                            }
+                        );
+
+                    });
+
+            });
+
+    </script>
+
+
+    <!-- =====================================================
+       INTRO JS
+  ====================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const introScreen =
+                    document.getElementById("introScreen");
+
+                if (!introScreen) return;
+
+
+                const navigation =
+                    performance.getEntriesByType(
+                        "navigation"
+                    )[0];
+
+
+                const navigationType =
+                    navigation
+                        ? navigation.type
+                        : "navigate";
+
+
+                const alreadyVisited =
+                    sessionStorage.getItem(
+                        "codecraftVisited"
+                    ) === "true";
+
+
+                if (
+                    alreadyVisited &&
+                    navigationType !== "reload"
+                ) {
+
+                    introScreen.remove();
+
+                    return;
+
+                }
+
+
+                sessionStorage.setItem(
+                    "codecraftVisited",
+                    "true"
+                );
+
+
+                setTimeout(
+                    function () {
+
+                        introScreen.classList.add("hide");
+
+
+                        setTimeout(
+                            function () {
+
+                                introScreen.remove();
+
+                            },
+                            700
+                        );
+
+                    },
+                    3500
+                );
+
+            });
+
+    </script>
+
+
+</body>
+
+</html>
